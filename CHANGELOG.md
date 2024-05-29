@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.1.2 2024.05.29
+
+- Feature: Add `deploy.py` script.
+
 ## v0.1.1 2024.03.14
 
 - Rename packages from `template` to `templatelib`.
