@@ -23,7 +23,7 @@ set -e  # Exit on error
 SONAR_SCANNER_VERSION="7.2.0.5079"
 PROJECT_KEY="IHCantabria_template.python.lib_3a6e6e1c-9615-45f0-b54f-db978ffc9844"
 SONAR_HOST_URL="https://ihsonarqube.ihcantabria.com"
-SONAR_TOKEN="sqp_cd029568f8d542f9205ffcc13c503c661f632d3a"
+SONAR_TOKEN="${SONAR_TOKEN:-}"  # Use environment variable or pass via --sonar-token
 PROJECT_DIR="."
 SKIP_CONNECTIVITY_TEST=false
 SKIP_QUALITY_GATE_CHECK=false
