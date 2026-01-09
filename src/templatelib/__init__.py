@@ -1,3 +1,7 @@
 """ Template """
+import tomli
+# Versión del paquete
+with open("pyproject.toml", "rb") as f:
+    config = tomli.load(f)
 
-__version__ = "0.1.2"
+version = config["project"]["version"]

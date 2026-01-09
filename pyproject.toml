@@ -4,6 +4,7 @@ build-backend = "flit_core.buildapi"
 
 
 [project]
+version = "v0.1.2"
 name = "templatelib"
 authors = [{ name = "Felipe Maza", email = "felipe.maza@unican.es" }]
 maintainers = [{ name = "Felipe Maza", email = "felipe.maza@unican.es" }]
@@ -21,13 +22,20 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
 ]
-dynamic = ["version", "description"]
+dynamic = ["description"]
 
-dependencies = ["pytest >=7"]
+dependencies = ["tomli==2.3.0"]
 
 
 [project.optional-dependencies]
-dev = ["flit", "black", "sphinx", "myst-nb", "sphinx_rtd_theme"]
+dev = [
+    "flit==3.12.0",
+    "black==25.12.0",
+    "Sphinx==8.2.3",
+    "myst-nb==1.3.0",
+    "sphinx-rtd-theme==3.0.2",
+    "pytest==9.0.2",
+]
 
 
 [project.urls]
@@ -37,7 +45,7 @@ changelog = "https://github.com/IHCantabria/template.python.lib/blob/main/CHANGE
 
 
 [project.scripts]
-template-tests = "template.tests.__init__:run_tests"
+template-tests = "templatelib.tests.__init__:run_tests"
 
 
 [tool.pytest.ini_options]
