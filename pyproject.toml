@@ -1,13 +1,18 @@
 [build-system]
-requires = ["flit_core >=3.2,<4"]
+requires = [
+    "flit_core >=3.2,<4",
+]
 build-backend = "flit_core.buildapi"
 
-
 [project]
-version = "v0.1.2"
+version = "v0.2.0"
 name = "templatelib"
-authors = [{ name = "Felipe Maza", email = "felipe.maza@unican.es" }]
-maintainers = [{ name = "Felipe Maza", email = "felipe.maza@unican.es" }]
+authors = [
+    { name = "Felipe Maza", email = "felipe.maza@unican.es" },
+]
+maintainers = [
+    { name = "Felipe Maza", email = "felipe.maza@unican.es" },
+]
 readme = "README.md"
 requires-python = ">=3.9"
 classifiers = [
@@ -22,10 +27,12 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
 ]
-dynamic = ["description"]
-
-dependencies = ["tomli==2.3.0"]
-
+dynamic = [
+    "description",
+]
+dependencies = [
+    "tomli==2.3.0",
+]
 
 [project.optional-dependencies]
 dev = [
@@ -37,16 +44,13 @@ dev = [
     "pytest==9.0.2",
 ]
 
-
 [project.urls]
 documentation = "https://ihcantabria.github.io/template.python.lib/"
 repository = "https://github.com/IHCantabria/template.python.lib"
 changelog = "https://github.com/IHCantabria/template.python.lib/blob/main/CHANGELOG.md"
 
-
 [project.scripts]
 template-tests = "templatelib.tests.__init__:run_tests"
-
 
 [tool.pytest.ini_options]
 addopts = "--durations=0 --durations-min=0.1"
