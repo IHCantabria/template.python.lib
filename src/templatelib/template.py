@@ -13,8 +13,8 @@ class Template(object):
         Returns:
         The sum of the two values.
         """
-        if type(value1) == str:
+        if isinstance(value1, str):
             value1 = float(value1)
-        if type(value2) == str:
+        if isinstance(value2, str):
             value2 = float(value2)
         return math.fsum([value1, value2])
